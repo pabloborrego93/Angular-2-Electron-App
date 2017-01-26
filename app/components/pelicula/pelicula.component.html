@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-5">
+			<h2>Portada</h2>
+			<img src="http://localhost:8082/images/{{pelicula.imgUrl}}" alt="imagen"  height="600" width="400">
+		</div>
+		<div class="col-md-7">
+			<h2>{{pelicula.title}}</h2>
+			<h4>Sinopsis</h4>
+			<p>{{pelicula.description}}</p>
+			<h4>Generos</h4>
+			<div *ngFor="let genre of pelicula.genres; let i=index" class="pelicula-item">
+				<span class="label label-success">{{genre.name}}</span>
+			</div>
+		</div>
+	</div>
+	<p></p>
+	<div class="col-md-12">
+		<button type="button" class="btn btn-primary pull-left" [routerLink]="['/listado']">Volver</button>
+		<button type="button" class="btn btn-danger pull-right" (click)="eliminarPelicula()">Eliminar</button>  
+		<button type="button" class="btn btn-warning pull-right" [routerLink]="['/editar', pelicula.id]">Editar</button>
+	</div>
+</div>

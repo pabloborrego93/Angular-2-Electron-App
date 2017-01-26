@@ -1,0 +1,64 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="https://pbs.twimg.com/media/CttG5m4UkAAnAng.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h3>Westworld</h3>
+          <p>¡No te la pierdas!</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="https://lh3.googleusercontent.com/-C5miMls7elo/TXgu4h30H6I/AAAAAAAADdY/UsZ7SJUkBB8/s1600/JackArmsOut_1299714942.jpg">
+        <div class="carousel-caption">
+          <h3>Piratas del caribe</h3>
+          <p>¿Aún no la has visto?</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+</div>
+
+<div class="container text-center">    
+  <h3>¿Qué te apetece ver?</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="https://eastridgecenter.com/wp-content/uploads/2016/03/Movie-Releases.jpg?w=640" class="img-responsive" style="width:100%; height:200px" alt="Image">
+      <p>Encuentra las mejores películas</p>
+    </div>
+    <div class="col-sm-4"> 
+      <img src="https://4.bp.blogspot.com/-6loyXT3YElQ/V1lL370EdhI/AAAAAAAABQU/09zmvbXiQ08OuhsmpOtScrJvqlWYyEMQQCLcB/s640/series.png" class="img-responsive" style="width:100%; height:200px" alt="Image">
+      <p>Encuentra las mejores series</p>    
+    </div>
+    <div class="col-sm-4">
+      <div class="well">
+       <h3><b>Ultimas peliculas</b></h3>
+       <div *ngFor="let pelicula of peliculas" class="pelicula-item">
+		<div class="row data">
+			<div class="col-md-10">
+				<h5><b>{{pelicula.title}}</b></h5>
+				<p>{{pelicula.description | slice:0:60}}...</p>
+			</div>
+		</div>
+	</div>
+      </div>
+	<br/><br/>
+    </div>
+  </div>
+</div><br>
